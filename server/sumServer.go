@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net"
-	"os"
+	//"os"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	pb "github.com/jacenr/gRPCinDockerDemo/grpcDemo"
@@ -17,15 +17,15 @@ func (s *server) GetSum(ctx context.Context, in *pb.Req) (*pb.Resp,error) {
 }
 
 func main() {
-        addr := "localhost:8001"
-        if len(os.Args) > 1 {
-                addr = os.Args[1]
-        }
+        addr := ":8001"
+        //if len(os.Args) > 1 {
+        //        addr = os.Args[1]
+        //}
 	lis, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
-	
+
 	s := grpc.NewServer()
 	pb.RegisterSumServer(s,&server{})
 	reflection.Register(s)
