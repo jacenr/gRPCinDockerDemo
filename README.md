@@ -1,5 +1,10 @@
 # gRPCinDockerDemo
 a test repository
+
+测试环境:  
+1. ubuntu 16.04  
+2. docker 18.03.1-ce
+3. go 1.10.2
   
 Usage:  
 1. cd /path/to/gRPCinDockerDemo/dockerServer  
@@ -12,6 +17,5 @@ Usage:
    output will be: s: 9  
    Note that double quotation marks.  
 8. stop containers:  
+![image](https://github.com/jacenr/gRPCinDockerDemo/blob/master/stop_containers.png)  
 
-
-由于二进制程序文件太占用GitHub空间, 二进制文件将在一天后删除.
